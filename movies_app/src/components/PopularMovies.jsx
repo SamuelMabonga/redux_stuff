@@ -66,6 +66,7 @@ class Movies extends Component {
           </div>
         )
       }
+      return null
     })
 
     return (

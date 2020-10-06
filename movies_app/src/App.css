@@ -51,7 +51,7 @@ body {
 }
 
 .header-image__layer {
-  background-color: rgba(3, 37, 65, 0.5);
+  background-color: rgba(3, 37, 65, 0.37);
   /* position: absolute; */
   /* top: 0;
   left: 0; */
@@ -72,34 +72,52 @@ body {
 
 
 
-.nav-wrapper {
+/* .nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+
+.logo {
+  max-width: 150px;
+  height : 55px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.logo-title {
+  color: aqua;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-body {
+  color: rgb(255, 102, 0);
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 40px;
+  overflow: hidden;
+  background-color: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.logo {
-  max-width: 150px;
-  float: left;
-}
-
-.search {
-  
-}
-
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: inherit;
-}
-
 .nav-list__item {
   float: left;
-}
-
-.nav-link {
+  padding: 5px;
   display: block;
   color: rgb(0, 183, 255);
   text-align: center;
@@ -108,8 +126,17 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* .nav-link {
+  display: block;
+  color: rgb(0, 183, 255);
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
 /* change nav-link color on hover */
-.nav-link:hover {
+.nav-list__item:hover {
   text-decoration: underline;
 }
 
@@ -180,6 +207,7 @@ body {
 
   align-items: center;
   padding: 0;
+  margin: 5;
   float: left;
 }
 
@@ -188,12 +216,17 @@ body {
   position: absolute;
   cursor: pointer;
   top: 1em;
-  right: 5.5em; 
+  right: 1em; 
 }
 
 .cart-icon {
   display: flex;
   justify-content: flex-end;
+  
+}
+
+.cart-icon-text {
+  color: aqua;
 }
 
 .cart-wrapper {
@@ -237,6 +270,17 @@ body {
   width: 20%;
 }
 
+.cart-items__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .cart__item {
   width: 40%;
 }
@@ -261,7 +305,7 @@ body {
   width: 65px;
 }
 
-/* User Settings Toggle */
+/* User Settings Toggle
 .user-settings {
   position: fixed;
   background: #303030;
@@ -354,7 +398,7 @@ body {
 
 .user-settings__link:hover {
   color: blue;
-}
+} */
 
 /* SEARCH AREA */
 .search-card {
@@ -363,11 +407,14 @@ body {
   height: 50vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 
 .search-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   height: 90%;
@@ -379,9 +426,14 @@ body {
   justify-content: center;
   width: 100%;
   height: 80%;
+  padding: 0;
+  margin: 0;
 }
 
-
+.search-content__space {
+  height: 30%;
+  display: block;
+}
 
 .search-title-wrapper {
   display: flex;
@@ -390,6 +442,8 @@ body {
 
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 
   text-align: center;
 } 
@@ -407,24 +461,36 @@ body {
   padding: 0;
 }
 
-.search-bar__wrapper {
+.search-bar__search-bar {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.search-bar__wrapper {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  width: 60%;
-  height: 20%;
-  position: absolute;
+  width: 100%;
+  /* height: 20%; */
+  padding: 0;
+  margin: 0;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .search-bar__content {
-  width: 100%;
-  position: relative;
+  width: 60%;
+  /* position: relative; */
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .search-query {
@@ -443,7 +509,7 @@ body {
 }
 
 .search-button {
-  width: 40px;
+  width: 100px;
   height: 36px;
   border: 1px solid rgb(0, 183, 255);
   background: rgb(0, 183, 255);

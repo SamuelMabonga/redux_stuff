@@ -13,34 +13,13 @@ export default function (state = initialState, action) {
     case FETCH_MOVIES:
       console.log('FETCH_MOVIES reducer >>>')
       const newMovies = action.payload
-      console.log(newMovies)
+      // console.log(newMovies)
 
       return {
         ...state,
         movies : [...newMovies],
         
       }
-
-    // case FETCH_LATEST_MOVIES:
-    //   console.log('FETCH_LATEST_MOVIES reducer >>>')
-    //   const latestMovies = action.payload
-    //   console.log(state.movies)
-    //   return {
-    //     movies : [
-    //       ...state.movies,
-    //       ...latestMovies
-    //     ]
-    //   }
-
-    // case FETCH_TV_SHOWS:
-    //   console.log('FETCH_TV_SHOWS reducer >>>')
-    //   const tvShows = action.payload
-    //   return {
-    //     movies : [
-    //       ...state.movies,
-    //       ...tvShows
-    //     ]
-    //   }
     
     case ADD_TO_CART:
       console.log('ADD_TO_CART reducer >>>')

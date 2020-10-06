@@ -47,6 +47,7 @@ class TvShows extends Component {
           </div>
         )
       }
+      return null
     })
 
     return (

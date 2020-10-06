@@ -10,7 +10,7 @@ import Header from './components/Header'
 import PopularMovies from './components/PopularMovies'
 import LatestMovies from './components/LatestMovies'
 import TvShows from './components/TvShows'
-import MoviesHooks from './components/MoviesHooks'
+// import MoviesHooks from './components/MoviesHooks'
 
 import store from './store'
 

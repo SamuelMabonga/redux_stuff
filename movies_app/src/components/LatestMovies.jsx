@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchLatestMovies, addToCart, addQuantity, subtractQuantity, emptyCart, removeFromCart } from '../actions/movieActions'
+import { addToCart, addQuantity, subtractQuantity, emptyCart, removeFromCart } from '../actions/movieActions'
 
 class LatestMovies extends Component { 
   addToCart = (id) => {
@@ -43,6 +43,7 @@ class LatestMovies extends Component {
           </div>
         )
       }
+      return null
     })
 
     return (
