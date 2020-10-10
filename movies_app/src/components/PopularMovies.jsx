@@ -44,7 +44,7 @@ class Movies extends Component {
   }
 
   propsCheck = () => {
-    console.log(this.props.movies)
+    console.log(this.props.search)
   }
 
   render () {
@@ -94,11 +94,13 @@ Movies.propTypes = {
   addQuantity : PropTypes.func.isRequired,
   subtractQuantity : PropTypes.func.isRequired,
   emptyCart : PropTypes.func.isRequired,
-  movies : PropTypes.array.isRequired
+  movies : PropTypes.array.isRequired,
+  search : PropTypes.array
 }
 
 const mapStateToProps = state => ({
-  movies: state.movies.movies
+  movies: state.movies.movies,
+  search : state.movies.searchMovies
 })
 
 export default connect(mapStateToProps, { fetchMovies, addToCart, addQuantity, subtractQuantity, emptyCart, removeFromCart })(Movies)

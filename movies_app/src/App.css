@@ -449,6 +449,7 @@ body {
 } 
 
 .search-title {
+  display: block;
   font-size: 48px;
   margin: 0;
   padding: 0;
@@ -456,6 +457,7 @@ body {
 }
 
 .search-subtitle {
+  display: block;
   font-size: 32px;
   margin: 0;
   padding: 0;

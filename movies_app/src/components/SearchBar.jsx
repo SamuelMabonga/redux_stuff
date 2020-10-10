@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { search } from '../actions/movieActions' 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [ query, setQuery ] = useState('')
+
+  const onChange = (e) => {
+    setQuery(e.target.value)
+  }
+
+  const searchMovies = () => {
+    if (query) {
+      props.search(query)
+    }
+    return null
+  }
+
   return (
     <div className="search-card">
       <div className="search-wrapper">
@@ -17,8 +33,8 @@ const SearchBar = () => {
             <div className="search-bar__wrapper">
               {/* <div className="search-bar__spacer"></div> */}
               <div className="search-bar__content">
-                <input type="text" id="searchQuery" className="search-query" placeholder="Enter name to search" />
-                <button id="searchButton" type="submit" className="search-button">
+                <input type="text" id="searchQuery" className="search-query" placeholder="Enter name to search" value={query} onChange={onChange}/>
+                <button id="searchButton" type="submit" className="search-button" onClick={searchMovies}>
                     Search
                 </button>
               </div>
@@ -31,4 +47,13 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+SearchBar.propTypes = {
+  search : PropTypes.func.isRequired,
+  
+}
+
+const mapStateToProps = state => ({
+  search : state.movies.search
+})
+
+export default connect(mapStateToProps, { search })(SearchBar)
